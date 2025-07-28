@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* // styles/globals.css */
+/* @import "tailwindcss/preflight"; */
+/* @tailwind components; */
+@tailwind utilities;
+
+
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+  --pink: #ec4899;
+  --dark: #0f0f0f;
+  --darker: #080808;
+  --light: #f8fafc;
+  --gray: #64748b;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 35, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-30px) rotate(180deg); 
+  }
+}
+
+@keyframes spin-slow {
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes counter-spin {
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(-360deg); 
+  }
+}
+
+/* Utility Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-counter-spin {
+  animation: counter-spin 20s linear infinite;
+}
+
+/* Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  z-index: 10000;
+  transition: width 0.1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-element {
+    display: none;
+  }
+}
+
+/* Focus styles for accessibility */
+/* button:focus,
+a:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+} */
+
