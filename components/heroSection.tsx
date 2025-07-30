@@ -66,7 +66,8 @@ const HeroSection: React.FC = () => {
               className="text-lg mb-10 text-white/80 max-w-2xl animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              A frontend developer who codes with mathematical rigor - crafting optimized Next.js interfaces where every component solves real user needs.
+              Frontend developer focused on building fast, responsive, and
+              user-driven web experiences with Next.js.
             </p>
             <div
               className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start animate-fade-in-up"
@@ -95,16 +96,17 @@ const HeroSection: React.FC = () => {
           <div className="flex-1 flex items-center justify-center min-w-60 px-4">
             <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <Image
-                src="https://images.unsplash.com/photo-1753109910060-ba1fa8fbd094?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                src="/HeadShot.jpg"
                 alt="Abdulateef Ogundeko"
                 fill
-                className="rounded-full object-cover border-4 border-cyan-400/30 shadow-2xl shadow-cyan-400/20 hover:scale-105 transition-transform duration-300"
+                className="rounded-full border-4 border-cyan-400/30 shadow-2xl shadow-cyan-400/20 hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

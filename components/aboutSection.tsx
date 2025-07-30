@@ -1,66 +1,93 @@
 // components/AboutSection.tsx
-import { Target, Laptop, Rocket  } from "lucide-react";
-import { useEffect, useRef } from 'react'
+import { Target, Laptop, Rocket } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const AboutSection: React.FC = () => {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up')
+            entry.target.classList.add("animate-fade-in-up");
           }
-        })
+        });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    )
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
 
-    const elements = sectionRef.current?.querySelectorAll('.reveal')
-    elements?.forEach((el) => observer.observe(el))
+    const elements = sectionRef.current?.querySelectorAll(".reveal");
+    elements?.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="min-h-screen py-24 flex items-center">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="min-h-screen py-24 flex items-center"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-5">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent reveal">
             About Me
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto reveal">
-            Where mathematical rigor meets technological innovation
+           Blending precision and creativity to craft innovative web solutions.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-20 items-center">
           <div className="reveal">
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Mathematical Mind, Digital Solutions</h3>
+            <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
+              Mathematical Mind, Digital Solutions
+            </h3>
             <div className="space-y-6 text-white/90 leading-relaxed">
               <p>
-                I&apos;m a Mathematics graduate with a passion for solving complex problems through analytical thinking and modern technology. 
-                My journey combines rigorous mathematical training from Tai Solarin University with cutting-edge frontend development skills.
+                I&apos;m a Frontend Developer with a strong foundation in
+                building sleek, responsive, and user-centered web applications.
+                With a background in Mathematics from Tai Solarin University,
+                I&apos;ve transitioned my analytical mindset into crafting
+                clean, scalable code and intuitive user interfaces using React,
+                Next.js, and Tailwind CSS.
               </p>
               <p>
-                My expertise spans statistical modeling, optimization techniques, and linear programming, which I&apos;ve applied to real-world 
-                challenges like fish farming optimization. I bring this analytical mindset to web development, creating responsive, 
-                user-focused applications with React, Next.js, and modern CSS frameworks.
+                I specialize in creating modern digital experiences—from
+                educational platforms to e-commerce websites—focused on
+                performance, accessibility, and seamless user interaction. I
+                bring a meticulous approach to every interface I build, a strong
+                grasp of component-based architecture, and a passion for turning
+                ideas into functional, Responsive and polished frontends
               </p>
               <p>
-                Whether it&apos;s building educational platforms, e-commerce solutions, or tackling optimization problems, I&apos;m driven by 
-                the desire to create meaningful impact through data-driven insights and elegant code.
+                What drives me is building products that make an impact—whether
+                it&apos;s helping users learn more effectively, shop with ease,
+                or engage with data in meaningful ways. I&apos;m always excited
+                to collaborate, learn new technologies, and contribute to teams
+                where code meets creativity and users come first.
               </p>
             </div>
 
             <div className="mt-10">
-              <h4 className="text-xl font-semibold text-purple-400 mb-4">Current Focus:</h4>
+              <h4 className="text-xl font-semibold text-purple-400 mb-4">
+                Current Focus:
+              </h4>
               <div className="space-y-2 text-white/80">
-                <p className="flex gap-2"><Target className="w-7 h-7 text-purple-500" /> Mathematical Science</p>
-                <p className="flex gap-2"><Laptop  className="w-7 h-7 text-cyan-400 animate-pulse" /> Front-End Development</p>
+                <p className="flex gap-2">
+                  <Target className="w-7 h-7 text-purple-500" /> Mathematical
+                  Science
+                </p>
+                <p className="flex gap-2">
+                  <Laptop className="w-7 h-7 text-cyan-400 animate-pulse" />{" "}
+                  Front-End Development
+                </p>
                 {/* <p>📊 Data Analysis & Optimization</p> */}
-                <p className="flex gap-2"><Rocket className="w-7 h-7 text-red-400 hover:scale-110 transition-all" /> Continuous Learning & Innovation</p>
+                <p className="flex gap-2">
+                  <Rocket className="w-7 h-7 text-red-400 hover:scale-110 transition-all" />{" "}
+                  Continuous Learning & Innovation
+                </p>
               </div>
             </div>
 
@@ -115,7 +142,7 @@ const AboutSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;
