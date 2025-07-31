@@ -20,7 +20,7 @@ export const initBackground = () => {
 
   // Create particle system
   const particlesGeometry = new THREE.BufferGeometry();
-  const particlesCount = 500;
+  const particlesCount = 300;
   const positions = new Float32Array(particlesCount * 3);
   const colors = new Float32Array(particlesCount * 3);
 
